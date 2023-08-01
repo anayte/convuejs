@@ -20,11 +20,7 @@
             </tr>
         </thead>
         <tbody>
-            @php $columna = 1; @endphp
-            @foreach ($products as $product)
-                @if ($columna === 1)
-                    <tr class="table-secondary">
-                @endif
+            <tr v-for="product in products" :key="product.id" class="table-secondary">
                 <td class="capsula">
                     <form method="post" action="/carrito">
                         <img src="data:image/jpg;base64,{{ chunk_split(base64_encode( $product->image_product )) }}" width="200" height="180">                
@@ -37,25 +33,28 @@
                         <button type="submit"> Agregar al Carrito </button>
                     </form>
                 </td>
-                @if ($columna === 5)
-                    </tr>
-                    @php $columna = 1; @endphp
-                @else
-                    @php $columna++; @endphp
-                @endif
-            @endforeach
-            @if ($columna !== 1)
-                </tr>
-            @endif
+            </tr>
         </tbody>
     </table>
 
 </template>
 
-<script >
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
+<script>
+export default {
+  data() {
+    return {
+      products: [],
+    };
+  },
+  mounted() {
+    this.fetchProducts();
+  },
+  methods: {
+    fetchProducts() {
+      // Realizar una petición al backend (API) para obtener los productos
+      // Puedes utilizar axios o fetch para hacer la petición
+      // Luego, asigna los productos obtenidos a la variable 'products'
+    },
+  },
+};
 </script>
