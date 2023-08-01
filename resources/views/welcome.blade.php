@@ -24,7 +24,6 @@
         </style>
     </head>
     <body class="antialiased">
-            <div id="app">
                 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
                     <div class="container-fluid">
                       <a class="navbar-brand" href="#">Navbar</a>
@@ -64,10 +63,10 @@
                         </form>
                       </div>
                     </div>
-                  </nav>  
-                <example-component></example-component>
+                  </nav>
+                  <div id="app">
+                    <carrito-component></carrito-component>
+                  </div>
                 <script src="{{ asset('js/app.js') }}"></script>
-            </div>
-        </div>
     </body>
 </html>

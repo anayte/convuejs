@@ -1,0 +1,73 @@
+body
+{
+    background-image: none;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    display: table;
+
+}
+
+.caja
+{
+    border: 1px dashed #000000;
+    margin: 20px;
+    border-radius: 5%;
+    width : 480px;
+    height: 220px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.199);
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.texto
+{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.capsula
+{
+        width: 150px;           
+        height: 150px;          
+        background: rgb(80, 80, 80);        
+        border: 1px solid #000;
+        text-align: center;
+}
+
+.proima
+{
+    width: 90%;           
+    height: 60%;  
+    vertical-align: top;
+}
+
+.contenedor 
+{
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+}
+  
+.elemento 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cajalogin 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.unstyle {
+    all: unset;
+  }
+  
