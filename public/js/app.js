@@ -21992,8 +21992,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      products: []
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    this.fetchProducts();
+  },
+  methods: {
+    fetchProducts: function fetchProducts() {}
   }
 });
 
@@ -22011,8 +22019,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      products: []
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    this.fetchProducts();
+  },
+  methods: {
+    fetchProducts: function fetchProducts() {}
   }
 });
 
@@ -22030,8 +22046,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      products: []
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    this.fetchProducts();
+  },
+  methods: {
+    fetchProducts: function fetchProducts() {}
   }
 });
 
@@ -22049,8 +22073,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      products: []
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    this.fetchProducts();
+  },
+  methods: {
+    fetchProducts: function fetchProducts() {}
   }
 });
 
@@ -22068,8 +22100,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      products: []
+    };
+  },
   mounted: function mounted() {
-    console.log('Component mounted.');
+    this.fetchProducts();
+  },
+  methods: {
+    fetchProducts: function fetchProducts() {}
   }
 });
 

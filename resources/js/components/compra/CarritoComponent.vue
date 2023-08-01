@@ -29,10 +29,20 @@
     </table>
 </template>
 
-<script >
+<script>
     export default {
+        data() {
+            return {
+            products: [],
+            };
+        },
         mounted() {
-            console.log('Component mounted.')
-        }
-    }
+            this.fetchProducts();
+        },
+        methods: {
+            fetchProducts() {
+
+            },
+        },
+    };
 </script>

@@ -40,21 +40,19 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      products: [],
-    };
-  },
-  mounted() {
-    this.fetchProducts();
-  },
-  methods: {
-    fetchProducts() {
-      // Realizar una petición al backend (API) para obtener los productos
-      // Puedes utilizar axios o fetch para hacer la petición
-      // Luego, asigna los productos obtenidos a la variable 'products'
+  export default {
+    data() {
+      return {
+        products: [],
+      };
     },
-  },
-};
+    mounted() {
+      this.fetchProducts();
+    },
+    methods: {
+      fetchProducts() {
+
+      },
+    },
+  };
 </script>
