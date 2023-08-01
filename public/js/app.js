@@ -22109,7 +22109,14 @@ __webpack_require__.r(__webpack_exports__);
     this.fetchProducts();
   },
   methods: {
-    fetchProducts: function fetchProducts() {}
+    fetchProducts: function fetchProducts() {
+      var _this = this;
+      axios.get('/inventario').then(function (response) {
+        _this.products = response.data;
+      })["catch"](function (error) {
+        console.error('Error al obtener los productos:', error);
+      });
+    }
   }
 });
 
@@ -22333,9 +22340,75 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/menu/InventaryComponent.vue?vue&type=template&id=4a4786a4 ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/anayte/Documentos/CRUD/PRO/convuejs/resources/js/components/menu/InventaryComponent.vue: Unexpected token (77:66)\n\n\u001b[0m \u001b[90m 75 |\u001b[39m       _createTextVNode(\u001b[32m\" @else @foreach ($products as $product) \"\u001b[39m)\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 76 |\u001b[39m       _createElementVNode(\u001b[32m\"tr\"\u001b[39m\u001b[33m,\u001b[39m _hoisted_4\u001b[33m,\u001b[39m [\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 77 |\u001b[39m         _createElementVNode(\u001b[32m\"td\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m _toDisplayString($product\u001b[33m-\u001b[39m\u001b[33m>\u001b[39mid_product)\u001b[33m,\u001b[39m \u001b[35m1\u001b[39m \u001b[90m/* TEXT */\u001b[39m)\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 78 |\u001b[39m         _createElementVNode(\u001b[32m\"td\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m _toDisplayString($product\u001b[33m-\u001b[39m\u001b[33m>\u001b[39mname_product)\u001b[33m,\u001b[39m \u001b[35m1\u001b[39m \u001b[90m/* TEXT */\u001b[39m)\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 79 |\u001b[39m         _createElementVNode(\u001b[32m\"td\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m _toDisplayString($product\u001b[33m-\u001b[39m\u001b[33m>\u001b[39mtype_product)\u001b[33m,\u001b[39m \u001b[35m1\u001b[39m \u001b[90m/* TEXT */\u001b[39m)\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 80 |\u001b[39m         _createElementVNode(\u001b[32m\"td\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m _toDisplayString($product\u001b[33m-\u001b[39m\u001b[33m>\u001b[39mprice_product)\u001b[33m,\u001b[39m \u001b[35m1\u001b[39m \u001b[90m/* TEXT */\u001b[39m)\u001b[33m,\u001b[39m\u001b[0m\n    at instantiate (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:63:32)\n    at constructor (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:358:12)\n    at Parser.raise (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:3255:19)\n    at Parser.unexpected (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:3285:16)\n    at Parser.parseExprAtom (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:11284:16)\n    at Parser.parseExprSubscripts (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10890:23)\n    at Parser.parseUpdate (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10873:21)\n    at Parser.parseMaybeUnary (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10849:23)\n    at Parser.parseMaybeUnaryOrPrivate (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10687:61)\n    at Parser.parseExprOpBaseRightExpr (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10780:34)\n    at Parser.parseExprOpRightExpr (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10775:21)\n    at Parser.parseExprOp (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10738:27)\n    at Parser.parseExprOps (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10696:17)\n    at Parser.parseMaybeConditional (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10669:23)\n    at Parser.parseMaybeAssign (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10630:21)\n    at /home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10600:39\n    at Parser.allowInAnd (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:12280:12)\n    at Parser.parseMaybeAssignAllowIn (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10600:17)\n    at Parser.parseExprListItem (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:12032:18)\n    at Parser.parseCallExpressionArguments (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:11087:22)\n    at Parser.parseCoverCallAndAsyncArrowHead (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10997:29)\n    at Parser.parseSubscript (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10932:19)\n    at Parser.parseSubscripts (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10903:19)\n    at Parser.parseExprSubscripts (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10894:17)\n    at Parser.parseUpdate (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10873:21)\n    at Parser.parseMaybeUnary (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10849:23)\n    at Parser.parseMaybeUnaryOrPrivate (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10687:61)\n    at Parser.parseExprOps (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10692:23)\n    at Parser.parseMaybeConditional (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10669:23)\n    at Parser.parseMaybeAssign (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10630:21)\n    at /home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10600:39\n    at Parser.allowInAnd (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:12280:12)\n    at Parser.parseMaybeAssignAllowIn (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10600:17)\n    at Parser.parseExprListItem (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:12032:18)\n    at Parser.parseCallExpressionArguments (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:11087:22)\n    at Parser.parseCoverCallAndAsyncArrowHead (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10997:29)\n    at Parser.parseSubscript (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10932:19)\n    at Parser.parseSubscripts (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10903:19)\n    at Parser.parseExprSubscripts (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10894:17)\n    at Parser.parseUpdate (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10873:21)\n    at Parser.parseMaybeUnary (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10849:23)\n    at Parser.parseMaybeUnaryOrPrivate (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10687:61)\n    at Parser.parseExprOps (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10692:23)\n    at Parser.parseMaybeConditional (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10669:23)\n    at Parser.parseMaybeAssign (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10630:21)\n    at /home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10600:39\n    at Parser.allowInAnd (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:12280:12)\n    at Parser.parseMaybeAssignAllowIn (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:10600:17)\n    at Parser.parseExprListItem (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:12032:18)\n    at Parser.parseExprList (/home/anayte/Documentos/CRUD/PRO/convuejs/node_modules/@babel/parser/lib/index.js:12004:22)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "table table-hover"
+};
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", {
+  "class": "table-dark"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  scope: "col"
+}, "Número"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  scope: "col"
+}, "Nombre Producto"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  scope: "col"
+}, "Tipo Producto"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  scope: "col"
+}, "Precio"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  scope: "col"
+}, "Cantidad"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", {
+  scope: "col"
+})])], -1 /* HOISTED */);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  method: "post",
+  action: "/eliminarp"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  type: "hidden",
+  name: "user",
+  id: "user",
+  value: "{{ Auth::user()->id }}"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  type: "hidden",
+  name: "nproduct",
+  id: "nproduct",
+  value: "{{ $product.name_product }}"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  type: "submit",
+  "class": "btn btn-danger"
+}, " Eliminar ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+  method: "post",
+  action: "/editar"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  type: "hidden",
+  name: "nproduct",
+  id: "nproduct",
+  value: "{{ $product.name_product }}"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  type: "hidden",
+  name: "user",
+  id: "user",
+  value: "{{ Auth::user()->id }}"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  type: "submit",
+  "class": "btn btn-primary"
+}, " Editar ")])], -1 /* HOISTED */);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("table", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.products, function (product) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
+      key: product.id,
+      "class": "table-secondary"
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(product.id_product), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(product.name_product), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(product.type_product), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(product.price_product), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(product.inventory_product), 1 /* TEXT */), _hoisted_3]);
+  }), 128 /* KEYED_FRAGMENT */))])]);
+}
 
 /***/ }),
 
@@ -22350,12 +22423,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/ProductComponent.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var _components_compra_CarritoComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/compra/CarritoComponent */ "./resources/js/components/compra/CarritoComponent.vue");
-/* harmony import */ var _components_compra_ComprarComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/compra/ComprarComponent */ "./resources/js/components/compra/ComprarComponent.vue");
-/* harmony import */ var _components_compra_ComprarComponent__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_compra_ComprarComponent__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_compra_ConfirmarComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/compra/ConfirmarComponent */ "./resources/js/components/compra/ConfirmarComponent.vue");
-/* harmony import */ var _components_menu_AddComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/menu/AddComponent */ "./resources/js/components/menu/AddComponent.vue");
+/* harmony import */ var _components_compra_CarritoComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/compra/CarritoComponent */ "./resources/js/components/compra/CarritoComponent.vue");
+/* harmony import */ var _components_compra_ComprarComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/compra/ComprarComponent */ "./resources/js/components/compra/ComprarComponent.vue");
+/* harmony import */ var _components_compra_ComprarComponent__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_compra_ComprarComponent__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_compra_ConfirmarComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/compra/ConfirmarComponent */ "./resources/js/components/compra/ConfirmarComponent.vue");
+/* harmony import */ var _components_menu_AddComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/menu/AddComponent */ "./resources/js/components/menu/AddComponent.vue");
 Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/menu/CheckinComponent'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* harmony import */ var _components_menu_HistoryComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/menu/HistoryComponent */ "./resources/js/components/menu/HistoryComponent.vue");
 /* harmony import */ var _components_menu_InventaryComponent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/menu/InventaryComponent */ "./resources/js/components/menu/InventaryComponent.vue");
@@ -22370,8 +22442,7 @@ var app = (0,vue__WEBPACK_IMPORTED_MODULE_1__.createApp)({});
 
 
 
-
-app.component('comprar-component', (_components_compra_ComprarComponent__WEBPACK_IMPORTED_MODULE_5___default()), 'confirmar-component', _components_compra_ConfirmarComponent__WEBPACK_IMPORTED_MODULE_6__["default"], 'carrito-component', _components_compra_CarritoComponent__WEBPACK_IMPORTED_MODULE_4__["default"], 'product-component', Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/ProductComponent.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), 'example-component', _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"], 'add-component', _components_menu_AddComponent__WEBPACK_IMPORTED_MODULE_7__["default"], 'checkin-component', Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/menu/CheckinComponent'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), 'historial-component', _components_menu_HistoryComponent__WEBPACK_IMPORTED_MODULE_8__["default"], 'inventario-component', _components_menu_InventaryComponent__WEBPACK_IMPORTED_MODULE_9__["default"]);
+app.component('comprar-component', (_components_compra_ComprarComponent__WEBPACK_IMPORTED_MODULE_4___default()), 'confirmar-component', _components_compra_ConfirmarComponent__WEBPACK_IMPORTED_MODULE_5__["default"], 'carrito-component', _components_compra_CarritoComponent__WEBPACK_IMPORTED_MODULE_3__["default"], 'example-component', _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"], 'add-component', _components_menu_AddComponent__WEBPACK_IMPORTED_MODULE_6__["default"], 'checkin-component', Object(function webpackMissingModule() { var e = new Error("Cannot find module './components/menu/CheckinComponent'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), 'historial-component', _components_menu_HistoryComponent__WEBPACK_IMPORTED_MODULE_8__["default"], 'inventario-component', _components_menu_InventaryComponent__WEBPACK_IMPORTED_MODULE_9__["default"]);
 app.mount('#app');
 
 /***/ }),
@@ -27488,11 +27559,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_InventaryComponent_vue_vue_type_template_id_4a4786a4__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_InventaryComponent_vue_vue_type_template_id_4a4786a4__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./InventaryComponent.vue?vue&type=template&id=4a4786a4 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/menu/InventaryComponent.vue?vue&type=template&id=4a4786a4");
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_InventaryComponent_vue_vue_type_template_id_4a4786a4__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_InventaryComponent_vue_vue_type_template_id_4a4786a4__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
-/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_InventaryComponent_vue_vue_type_template_id_4a4786a4__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_InventaryComponent_vue_vue_type_template_id_4a4786a4__WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
-/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
 
 
 /***/ }),

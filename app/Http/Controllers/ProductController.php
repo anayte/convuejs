@@ -75,7 +75,8 @@ class ProductController extends Controller
         // Verifica si se encontró el producto
         if ($products->isEmpty()) {
             // Si no se encontró el producto, redirecciona a la vista sin valor.
-            return view('partials.menu.inventario', ['products' => $products]);
+            //return view('partials.menu.inventario', ['products' => $products]);
+            return view('partials.menu.inventario')->json($products);
         } else {
             // Redirecciona a vista Inventario con el valor encontrado
             //return redirect('/inventario')->with('products', $products);

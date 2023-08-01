@@ -5,7 +5,6 @@ import { createApp } from 'vue';
 const app = createApp({});
 
 import ExampleComponent from './components/ExampleComponent.vue';
-import ProductComponent from './components/ProductComponent.vue';
 import CarritoComponent from './components/compra/CarritoComponent';
 import ComprarComponent from './components/compra/ComprarComponent';
 import ConfirmarComponent from './components/compra/ConfirmarComponent';
@@ -19,7 +18,6 @@ app.component(
     'comprar-component', ComprarComponent,
     'confirmar-component',ConfirmarComponent,
     'carrito-component', CarritoComponent,
-    'product-component', ProductComponent,
     'example-component', ExampleComponent,
     'add-component', AddComponent,
     'checkin-component', CheckinComponent,
