@@ -4,18 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
-use App\Http\Controllers\Auth;
-
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
-    //
     
+    //
+
     public function create (Request $request)
     {
 
         //Crea nueva instancia del modelo Procuct
         $product = new Product();
+        $user = Auth::user()->id;
 
         //Asigna los valores del request a las propiedades del modelo 
         $product -> name_product = $request -> nproducto ;
@@ -23,10 +24,10 @@ class ProductController extends Controller
         $product -> inventory_product = $request ->  cproduct ;
         $product -> price_product = $request -> pproduct;
         $product -> status_product = 'Disponible';
-        $product -> id_user = $request -> user;
+        $product -> id_user = $user;
         $product -> image_product = $request -> iproduct;
 
-        $products = Product::where('id_user', $request -> user)
+        $products = Product::where('id_user',  $user)
                             ->where('name_product', $request -> nproducto)
                             ->where('status_product', "Disponible")
                             ->get();
@@ -45,7 +46,7 @@ class ProductController extends Controller
             $suma = $products->first()->inventory_product  + $request ->  cproduct;
 
             //Busca el producto segun id , estado y suma el dato al inventario actual. 
-            $Actualizar = Product::where('id_user', $request -> user)
+            $Actualizar = Product::where('id_user', $user)
                                     ->where('name_product', $request -> nproducto)
                                     ->where('status_product', "Disponible")
                                     ->update(['inventory_product'  => $suma ,'price_product' => $request -> pproduct , 'type_product' => $request ->  tproducto , 'image_product' => $request -> iproduct]);
@@ -55,32 +56,35 @@ class ProductController extends Controller
 
         }
     
-
     }
 
     public function find (Request $request)
     {
         //Crea nueva instancia del modelo Procuct
         $product = new Product();
+        $user = Auth::user()->id;
 
         //Asigna los valores del request a las propiedades del modelo 
-        $id_user = $request -> user ;
+        $id_user = $user ;
         $status_product = 'Disponible' ;
 
         //busca según el ID del usuario y el estado del producto 
         $products = Product::where('id_user', $id_user)
                             ->where('status_product', $status_product)
                             ->get();
-
+        //var_dump($products);
+        //die;
         // Verifica si se encontró el producto
         if ($products->isEmpty()) {
             // Si no se encontró el producto, redirecciona a la vista sin valor.
             //return view('partials.menu.inventario', ['products' => $products]);
-            return view('partials.menu.inventario')->json($products);
+            //return view('partials.menu.inventario')->json($products);
+            return response()->json($products);
         } else {
             // Redirecciona a vista Inventario con el valor encontrado
             //return redirect('/inventario')->with('products', $products);
-            return view('partials.menu.inventario', ['products' => $products]);
+            //return view('partials.menu.inventario')->json($products);
+            return response()->json($products);
         }
 
     }
@@ -112,18 +116,19 @@ class ProductController extends Controller
     {
         //Crea nueva instancia del modelo Procuct
         $product = new Product();
+        $user = Auth::user()->id;
 
         //Asigna los valores del request a las propiedades del modelo 
         $name_product = $request -> nproduct ;
-        $id_user = $request -> user;
+        $id_user = $user;
 
         //Elimina el producto seleccionado 
-        $dproduct = Product::where('id_user', $request -> user )
+        $dproduct = Product::where('id_user', $is_user )
                             ->where('name_product',  $request -> nproduct)
                             ->delete();
 
         //busca según el ID del usuario y el estado del producto 
-        $products = Product::where('id_user', $request -> user)
+        $products = Product::where('id_user', $id_user)
                             ->where('status_product', "Disponible")
                             ->get();
 
@@ -144,12 +149,12 @@ class ProductController extends Controller
         $product = new Product();
 
         //Asigna los valores del request a las propiedades del modelo 
-        $name_product = $request -> nproduct ;
-        $id_user = $request -> user;
+        $name_product = $request -> nproduct;
+        $id_user = $user;
     
                                     
         //busca según el ID del usuario y el estado del producto 
-        $products = Product::where('id_user', $request -> user)
+        $products = Product::where('id_user', $id_user)
                             ->where('status_product', 'Disponible')
                             ->where('name_product', $request -> nproduct)
                             ->get();
@@ -170,9 +175,10 @@ class ProductController extends Controller
     {
         //Crea nueva instancia del modelo Procuct
         $product = new Product();
+        $user = Auth::user()->id; 
 
         //Asigna los valores del request a las propiedades del modelo 
-        $id_user = $request -> user ;
+        $id_user = $user ;
         $status_product = 'Vendido' ;
 
         //busca según el ID del usuario y el estado del producto 
@@ -184,6 +190,7 @@ class ProductController extends Controller
         if ($products->isEmpty()) {
             // Si no se encontró el producto, redirecciona a la vista sin valor.
             return view('partials.menu.checkin', ['products' => $products]);
+
         } else {
             // Redirecciona a vista Inventario con el valor encontrado
             //return redirect('/inventario')->with('products', $products);

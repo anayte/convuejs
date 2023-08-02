@@ -11,50 +11,54 @@
             </tr>
         </thead>
         <tbody>
-                <tr v-for="product in products" :key="product.id" class="table-secondary">
-                    <td>{{ product.id_product }}</td>
-                    <td>{{ product.name_product }}</td>
-                    <td>{{ product.type_product }}</td>
-                    <td>{{ product.price_product }}</td>
-                    <td>{{ product.inventory_product }}</td>
-                    <td> 
-                        <form method="post" action="/eliminarp" > 
-                            <input type="hidden" name="user" id="user" value="{{ Auth::user()->id }}">
-                            <input type="hidden" name="nproduct" id="nproduct" value="{{ $product.name_product }}">
-                            <button type="submit" class="btn btn-danger"> Eliminar </button>
-                        </form> 
-                        <form method="post" action="/editar"> 
-                            <input type="hidden" name="nproduct" id="nproduct" value="{{ $product.name_product }}">
-                            <input type="hidden" name="user" id="user" value="{{ Auth::user()->id }}">
-                            <button type="submit" class="btn btn-primary"> Editar </button>
-                        </form>
-                    </td>
-                </tr>         
+            <tr v-for="product in products" :key="product.id" class="table-secondary">
+                <td>{{ product.id_product }}</td>
+                <td>{{ product.name_product }}</td>
+                <td>{{ product.type_product }}</td>
+                <td>{{ product.price_product }}</td>
+                <td>{{ product.inventory_product }}</td>
+                <td> 
+                    <form method="post" action="/eliminarp" > 
+                        <input type="hidden" name="user" id="user" value="{{ Auth::user()->id }}">
+                        <input type="hidden" name="nproduct" id="nproduct" value="{{ product.name_product }}">
+                        <button type="submit" class="btn btn-danger"> Eliminar </button>
+                    </form> 
+                    <form method="post" action="/editar"> 
+                        <input type="hidden" name="nproduct" id="nproduct" value="{{ product.name_product }}">
+                        <input type="hidden" name="user" id="user" value="{{ Auth::user()->id }}">
+                        <button type="submit" class="btn btn-primary"> Editar </button>
+                    </form>
+                </td>
+            </tr>         
         </tbody>
     </table>
 </template>
 
 <script>
-    export default {
-        data() {
+    export default 
+    {
+        data() 
+        {
             return {
             products: [],
             };
         },
-        mounted() {
+        mounted() 
+        {
             this.fetchProducts();
         },
-        methods: {
-            fetchProducts() {
+        methods: 
+        {
+            fetchProducts() 
+            {
                 axios.get('/inventario')
                     .then(response => {
-                    this.products = response.data;
+                        this.products = response.data;
                     })
                     .catch(error => {
-                    console.error('Error al obtener los productos:', error);
-                    }
-                );
+                        console.error('Error al obtener los productos:', error);
+                    });
             },
-        },
+        }
     };
 </script>

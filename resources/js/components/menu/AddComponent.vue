@@ -1,6 +1,5 @@
 <template>
     <form method="post" action="/agregar"  class="contenedor" >
-        @csrf
         <table class="elemento">
             <tr>
                 <th><label for="Name"> Nombre del Producto : </label></th>
@@ -33,7 +32,6 @@
                 <th><button  type="submit"> Agregar producto </button></th>
             </tr>
         </table>
-
     </form>
 
 </template>
