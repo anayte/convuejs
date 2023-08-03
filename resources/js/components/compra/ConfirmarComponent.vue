@@ -64,6 +64,7 @@
         },
         mounted() {
             this.fetchProducts();
+            console.log('Component mounted.');
         },
         methods: {
             fetchProducts() {

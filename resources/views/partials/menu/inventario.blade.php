@@ -1,5 +1,5 @@
 @extends('menu')
 
 @section('content')
-    <inventario-component></inventario-component>
+    <inventary-component></inventary-component>   
 @endsection

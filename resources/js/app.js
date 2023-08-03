@@ -14,15 +14,13 @@ import HistoryComponent     from './components/menu/HistoryComponent.vue';
 import InventaryComponent   from './components/menu/InventaryComponent.vue';
 
 
-app.component(
-    'comprar-component', ComprarComponent,
-    'confirmar-component',ConfirmarComponent,
-    'carrito-component', CarritoComponent,
-    'example-component', ExampleComponent,
-    'add-component', AddComponent,
-    'checkin-component', CheckinComponent,
-    'historial-component', HistoryComponent,
-    'inventario-component',InventaryComponent
-);
+app.component('comprar-component', ComprarComponent);
+app.component('example-component', ExampleComponent);
+app.component('confirmar-component',ConfirmarComponent);
+app.component('carrito-component', CarritoComponent);
+app.component('add-component', AddComponent);
+app.component('checkin-component', CheckinComponent);
+app.component('historial-component', HistoryComponent);
+app.component('inventary-component', InventaryComponent);
 
 app.mount('#app');

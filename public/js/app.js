@@ -21999,6 +21999,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.fetchProducts();
+    console.log('Component mounted.');
   },
   methods: {
     fetchProducts: function fetchProducts() {}
@@ -22026,6 +22027,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.fetchProducts();
+    console.log('Component mounted.');
   },
   methods: {
     fetchProducts: function fetchProducts() {}
@@ -22053,6 +22055,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.fetchProducts();
+    console.log('Component mounted.');
   },
   methods: {
     fetchProducts: function fetchProducts() {}
@@ -22080,6 +22083,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.fetchProducts();
+    console.log('Component mounted.');
   },
   methods: {
     fetchProducts: function fetchProducts() {}
@@ -22107,6 +22111,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.fetchProducts();
+    console.log('Component mounted.');
   },
   methods: {
     fetchProducts: function fetchProducts() {
@@ -22141,6 +22146,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.fetchProducts();
+    console.log('Component mounted.');
   },
   methods: {
     fetchProducts: function fetchProducts() {}
@@ -22168,6 +22174,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.fetchProducts();
+    console.log('Component mounted.');
   },
   methods: {
     fetchProducts: function fetchProducts() {
@@ -22194,8 +22201,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   render: () => (/* binding */ render)
 /* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return null;
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("h1", null, "Componente ejemplo");
 }
 
 /***/ }),
@@ -22599,7 +22608,14 @@ var app = (0,vue__WEBPACK_IMPORTED_MODULE_1__.createApp)({});
 
 
 
-app.component('comprar-component', _components_compra_ComprarComponent_vue__WEBPACK_IMPORTED_MODULE_4__["default"], 'confirmar-component', _components_compra_ConfirmarComponent_vue__WEBPACK_IMPORTED_MODULE_5__["default"], 'carrito-component', _components_compra_CarritoComponent_vue__WEBPACK_IMPORTED_MODULE_3__["default"], 'example-component', _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"], 'add-component', _components_menu_AddComponent_vue__WEBPACK_IMPORTED_MODULE_6__["default"], 'checkin-component', _components_menu_CheckinComponent_vue__WEBPACK_IMPORTED_MODULE_7__["default"], 'historial-component', _components_menu_HistoryComponent_vue__WEBPACK_IMPORTED_MODULE_8__["default"], 'inventario-component', _components_menu_InventaryComponent_vue__WEBPACK_IMPORTED_MODULE_9__["default"]);
+app.component('comprar-component', _components_compra_ComprarComponent_vue__WEBPACK_IMPORTED_MODULE_4__["default"]);
+app.component('example-component', _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]);
+app.component('confirmar-component', _components_compra_ConfirmarComponent_vue__WEBPACK_IMPORTED_MODULE_5__["default"]);
+app.component('carrito-component', _components_compra_CarritoComponent_vue__WEBPACK_IMPORTED_MODULE_3__["default"]);
+app.component('add-component', _components_menu_AddComponent_vue__WEBPACK_IMPORTED_MODULE_6__["default"]);
+app.component('checkin-component', _components_menu_CheckinComponent_vue__WEBPACK_IMPORTED_MODULE_7__["default"]);
+app.component('historial-component', _components_menu_HistoryComponent_vue__WEBPACK_IMPORTED_MODULE_8__["default"]);
+app.component('inventary-component', _components_menu_InventaryComponent_vue__WEBPACK_IMPORTED_MODULE_9__["default"]);
 app.mount('#app');
 
 /***/ }),

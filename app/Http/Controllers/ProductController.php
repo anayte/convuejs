@@ -62,7 +62,7 @@ class ProductController extends Controller
     {
         //Crea nueva instancia del modelo Procuct
         $product = new Product();
-        $user = Auth::user()->id;
+        $user = $request -> user;
 
         //Asigna los valores del request a las propiedades del modelo 
         $id_user = $user ;
@@ -72,19 +72,20 @@ class ProductController extends Controller
         $products = Product::where('id_user', $id_user)
                             ->where('status_product', $status_product)
                             ->get();
+
         //var_dump($products);
         //die;
+
         // Verifica si se encontró el producto
         if ($products->isEmpty()) {
             // Si no se encontró el producto, redirecciona a la vista sin valor.
-            //return view('partials.menu.inventario', ['products' => $products]);
+            return view('partials.menu.inventario', ['products' => $products]);
             //return view('partials.menu.inventario')->json($products);
-            return response()->json($products);
         } else {
             // Redirecciona a vista Inventario con el valor encontrado
             //return redirect('/inventario')->with('products', $products);
-            //return view('partials.menu.inventario')->json($products);
-            return response()->json($products);
+            return view('partials.menu.inventario', ['products' => $products]);
+            //return response()->json($products);
         }
 
     }
