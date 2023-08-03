@@ -16,9 +16,7 @@
 </head>
 
 <body class="contenedor">
-
     <h1>Principal</h1>
-
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarColor02">
@@ -89,15 +87,13 @@
                     </div>
                 </li>
             @endguest
-        </ul>
+          </ul>
         </div>
       </div>
     </nav>
-
     <div id="app">
       @yield('content')  
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
-
 </body>
 </html>

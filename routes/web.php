@@ -11,11 +11,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-/*Route::get('/{any}', function () {
-    return view('menu');
-})->where('any', '.*');*/
-
-
 Route::middleware(['auth'])->group(function () {
     
     Route::get('/home', function () {
@@ -41,7 +36,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/agregar', function () {
         return view('partials.menu.add');
     });
-
 
     Route::get('/inventario', [ProductController::class, 'find'])->name('find');
     Route::post('/inventario', [ProductController::class, 'find'])->name('find');

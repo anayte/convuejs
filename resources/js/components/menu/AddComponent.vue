@@ -1,5 +1,7 @@
 <template>
-    <form method="post" action="/agregar"  class="contenedor" >
+
+    <form @submit="addProduct" class="contenedor" >
+
         <table class="elemento">
             <tr>
                 <th><label for="Name"> Nombre del Producto : </label></th>
@@ -32,25 +34,33 @@
                 <th><button  type="submit"> Agregar producto </button></th>
             </tr>
         </table>
+
     </form>
 
 </template>
 
 <script>
+
+    import axios from 'axios';
+
     export default {
-        data() {
-            return {
-            products: [],
-            };
-        },
         mounted() {
-            this.fetchProducts();
-            console.log('Component mounted.');
+            console.log('Component mounted.',$id_user)
         },
         methods: {
-            fetchProducts() {
+            addProduct(event) {
+                event.preventDefault(); 
 
-            },
+                const formData = new FormData(event.target); 
+                axios.post('/agregar', formData)
+                    .then(response => {
+                    console.log('Producto agregado:', response.data);
+                })
+                .catch(error => {
+                    console.error('Error al agregar el producto:', error);
+                });
+            }
         },
     };
+
 </script>

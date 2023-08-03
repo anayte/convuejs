@@ -22075,18 +22075,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      products: []
-    };
-  },
   mounted: function mounted() {
-    this.fetchProducts();
-    console.log('Component mounted.');
+    console.log('Component mounted.', $id_user);
   },
   methods: {
-    fetchProducts: function fetchProducts() {}
+    addProduct: function addProduct(event) {
+      event.preventDefault();
+      var formData = new FormData(event.target);
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/agregar', formData).then(function (response) {
+        console.log('Producto agregado:', response.data);
+      })["catch"](function (error) {
+        console.error('Error al agregar el producto:', error);
+      });
+    }
   }
 });
 
@@ -22380,15 +22385,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-var _hoisted_1 = {
-  method: "post",
-  action: "/agregar",
-  "class": "contenedor"
-};
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<table class=\"elemento\"><tr><th><label for=\"Name\"> Nombre del Producto : </label></th><th><input type=\"varchar\" name=\"nproducto\" id=\"nproducto\" placeholder=\" Por ejemplo: Seven Up \"></th></tr><tr><th><label for=\"Type\"> Tipo de Producto : </label></th><th><input type=\"text\" name=\"tproducto\" id=\"tproducto\" placeholder=\" Por ejemplo: Bebida \"></th></tr><tr><th><label for=\"Inventory\"> Cantidad : </label></th><th><input type=\"number\" name=\"cproduct\" id=\"cproduct\" placeholder=\" Por ejemplo: 100 \"></th></tr><tr><th><label for=\"Price\"> Precio : Q</label></th><th><input type=\"integer\" name=\"pproduct\" id=\"pproduct\" placeholder=\" Por ejemplo: 5 \"></th></tr><tr><th><label for=\"image\"> Imagen </label></th><th><input type=\"file\" name=\"iproduct\" id=\"iproduct\" accept=\".jpg\"></th></tr><tr><th><input type=\"hidden\" name=\"user\" id=\"user\" value=\"{{ Auth::user()-&gt;id }}\"></th></tr><tr><th><button type=\"submit\"> Agregar producto </button></th></tr></table>", 1);
-var _hoisted_3 = [_hoisted_2];
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<table class=\"elemento\"><tr><th><label for=\"Name\"> Nombre del Producto : </label></th><th><input type=\"varchar\" name=\"nproducto\" id=\"nproducto\" placeholder=\" Por ejemplo: Seven Up \"></th></tr><tr><th><label for=\"Type\"> Tipo de Producto : </label></th><th><input type=\"text\" name=\"tproducto\" id=\"tproducto\" placeholder=\" Por ejemplo: Bebida \"></th></tr><tr><th><label for=\"Inventory\"> Cantidad : </label></th><th><input type=\"number\" name=\"cproduct\" id=\"cproduct\" placeholder=\" Por ejemplo: 100 \"></th></tr><tr><th><label for=\"Price\"> Precio : Q</label></th><th><input type=\"integer\" name=\"pproduct\" id=\"pproduct\" placeholder=\" Por ejemplo: 5 \"></th></tr><tr><th><label for=\"image\"> Imagen </label></th><th><input type=\"file\" name=\"iproduct\" id=\"iproduct\" accept=\".jpg\"></th></tr><tr><th><input type=\"hidden\" name=\"user\" id=\"user\" value=\"{{ Auth::user()-&gt;id }}\"></th></tr><tr><th><button type=\"submit\"> Agregar producto </button></th></tr></table>", 1);
+var _hoisted_2 = [_hoisted_1];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("form", _hoisted_1, _hoisted_3);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("form", {
+    onSubmit: _cache[0] || (_cache[0] = function () {
+      return $options.addProduct && $options.addProduct.apply($options, arguments);
+    }),
+    "class": "contenedor"
+  }, _hoisted_2, 32 /* HYDRATE_EVENTS */);
 }
 
 /***/ }),
