@@ -1,5 +1,12 @@
 @extends('menu')
 
 @section('content')
-    <inventary-component></inventary-component>   
+
+<div id="app">
+        
+</div>
+
+@vite('resources/js/app.js')
+
+
 @endsection

@@ -2,7 +2,7 @@
 import './bootstrap';
 import { createApp } from 'vue';
 
-// const app = createApp({});
+//const app = createApp({});
 
 import ExampleComponent     from './components/ExampleComponent.vue';
 import CarritoComponent     from './components/compra/CarritoComponent.vue';
@@ -14,7 +14,7 @@ import HistoryComponent     from './components/menu/HistoryComponent.vue';
 import InventaryComponent   from './components/menu/InventaryComponent.vue';
 
 
-// app.component('comprar-component', ComprarComponent);
+// app('comprar-component', ComprarComponent);
 // app.component('example-component', ExampleComponent);
 // app.component('confirmar-component',ConfirmarComponent);
 // app.component('carrito-component', CarritoComponent);
@@ -26,3 +26,5 @@ import InventaryComponent   from './components/menu/InventaryComponent.vue';
 //app.mount('#app');
 
 createApp(InventaryComponent).mount("#app");
+createApp(HistoryComponent).mount("#historial");
+createApp(AddComponent).mount("#editar");

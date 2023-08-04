@@ -1,5 +1,12 @@
 @extends('menu')
 
 @section('content')
-    <historial-component></historial-component>
+
+<div id="historial">
+        
+</div>
+
+@vite('resources/js/app.js')
+
+
 @endsection

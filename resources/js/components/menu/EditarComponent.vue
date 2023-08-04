@@ -1,4 +1,5 @@
 <template>
+
     <div v-for="product in products" :key="product.id" class="table-secondary">
         <form method="post" action="/agregar"  class="contenedor" >
             <table class="elemento">
@@ -45,7 +46,7 @@
         },
         methods: {
             fetchProducts() {
-                axios.get('/inventario2')
+                axios.get('/inventario')
                     .then(response => {
                     this.products = response.data;
                     })

@@ -2,7 +2,12 @@
 
 @section('content')
 
-    <editar-component></editar-component>
+<div id="editar">
+        
+</div>
+
+@vite('resources/js/app.js')
+
 
 @endsection
               
