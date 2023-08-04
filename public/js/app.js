@@ -22121,7 +22121,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     fetchProducts: function fetchProducts() {
       var _this = this;
-      axios.get('/inventario').then(function (response) {
+      axios.get('/inventario2').then(function (response) {
         _this.products = response.data;
       })["catch"](function (error) {
         console.error('Error al obtener los productos:', error);
@@ -22178,17 +22178,26 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    this.fetchProducts();
+    //this.fetchProducts();
     console.log('Component mounted.');
   },
   methods: {
     fetchProducts: function fetchProducts() {
-      var _this = this;
-      axios.get('/inventario').then(function (response) {
-        _this.products = response.data;
-      })["catch"](function (error) {
-        console.error('Error al obtener los productos:', error);
-      });
+      // axios.get('/inventario',
+      // {
+      //     headers: {
+      //         'Content-Type': 'application/json',
+      //         'Accept': 'application/json'
+      //     }
+      // }
+      // )
+      //     .then(response => {
+      //        // this.products = response.data;
+      //         console.log("lista-productos",response);
+      //     })
+      //     .catch(error => {
+      //         console.error('Error al obtener los productos:', error);
+      //     });
     }
   }
 });
@@ -22646,7 +22655,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.axios = (axios__WEBPACK_IMPORTED_MODULE_1___default());
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+//window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

@@ -80,7 +80,7 @@ class ProductController extends Controller
         $products = Product::where('id_user', $id_user)
                             ->where('status_product', $status_product)
                             ->get();
-
+                            
         //var_dump($products);
         //die;
 
@@ -92,8 +92,12 @@ class ProductController extends Controller
         } else {
             // Redirecciona a vista Inventario con el valor encontrado
             //return redirect('/inventario')->with('products', $products);
-            return view('partials.menu.inventario', ['products' => $products]);
-            //return response()->json($products);
+            //return view('partials.menu.inventario', ['products' => $products]);
+            //return response($products);
+            //return reponse(['products' => $products]);
+            //return $this->success(compact('products'));
+            return response()->json([ "result"=> true, "data" => $products ], 200, [ 'Content-Type'=> 'application/json', 'Accept'=> 'application/json']);
+
         }
 
     }

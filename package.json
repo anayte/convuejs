@@ -1,10 +1,10 @@
 {
     "private": true,
     "scripts": {
-        "dev": "vite",
-        "deve": "npm run development",
+        "dev": "vite --host 0.0.0.0 --port 4205 ",
+        "deve": "npm run development --host 0.0.0.0 --port 4205 ",
         "development": "mix",
-        "watch": "mix watch",
+        "watch": "mix watch --host 0.0.0.0:4205",
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",

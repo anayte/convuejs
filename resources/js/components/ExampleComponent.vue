@@ -1,11 +1,14 @@
+<script setup>
+import { ref } from 'vue'
+const count = ref(0)
+</script>
+
 <template>
-    <h1>Componente ejemplo</h1>
+  <button @click="count++">Count is: {{ count }}</button>
 </template>
 
-<script >
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
-    }
-</script>
+<style scoped>
+button {
+  font-weight: bold;
+}
+</style>

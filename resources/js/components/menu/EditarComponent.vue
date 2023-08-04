@@ -21,9 +21,7 @@
                 <th><label for="image"> Imagen </label></th>
                 <th><input type="file" name="iproduct" id="iproduct"  accept=".jpg"></th>
                 <tr>
-                    <th>
-                        <input type="hidden" name="user" id="user" value="{{ Auth::user()->id }}">
-                    </th>
+                    <th><input type="hidden" name="user" id="user" value="{{ Auth::user()->id }}"></th>
                 </tr>
                 <tr>
                     <th><button  type="submit"> Agregar producto </button></th>
@@ -47,7 +45,7 @@
         },
         methods: {
             fetchProducts() {
-                axios.get('/inventario')
+                axios.get('/inventario2')
                     .then(response => {
                     this.products = response.data;
                     })

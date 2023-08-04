@@ -2,7 +2,7 @@
 import './bootstrap';
 import { createApp } from 'vue';
 
-const app = createApp({});
+// const app = createApp({});
 
 import ExampleComponent     from './components/ExampleComponent.vue';
 import CarritoComponent     from './components/compra/CarritoComponent.vue';
@@ -14,13 +14,15 @@ import HistoryComponent     from './components/menu/HistoryComponent.vue';
 import InventaryComponent   from './components/menu/InventaryComponent.vue';
 
 
-app.component('comprar-component', ComprarComponent);
-app.component('example-component', ExampleComponent);
-app.component('confirmar-component',ConfirmarComponent);
-app.component('carrito-component', CarritoComponent);
-app.component('add-component', AddComponent);
-app.component('checkin-component', CheckinComponent);
-app.component('historial-component', HistoryComponent);
-app.component('inventary-component', InventaryComponent);
+// app.component('comprar-component', ComprarComponent);
+// app.component('example-component', ExampleComponent);
+// app.component('confirmar-component',ConfirmarComponent);
+// app.component('carrito-component', CarritoComponent);
+// app.component('add-component', AddComponent);
+// app.component('checkin-component', CheckinComponent);
+// app.component('historial-component', HistoryComponent);
+// app.component('inventary-component', InventaryComponent);
 
-app.mount('#app');
+//app.mount('#app');
+
+createApp(InventaryComponent).mount("#app");

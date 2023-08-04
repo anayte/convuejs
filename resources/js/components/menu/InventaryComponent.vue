@@ -1,4 +1,5 @@
 <template>
+
     <table class="table table-hover" >
         <thead>
             <tr class="table-dark">
@@ -32,6 +33,7 @@
             </tr>         
         </tbody>
     </table>
+    
 </template>
 
 <script>
@@ -40,7 +42,7 @@
         data() 
         {
             return {
-            products: [],
+                products: [],
             };
         },
         mounted() 
@@ -50,11 +52,20 @@
         },
         methods: 
         {
+
             fetchProducts() 
             {
-                axios.get('/inventario')
+                axios.get('/inventario',
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                }
+                )
                     .then(response => {
-                        this.products = response.data;
+                       this.products = response.data.data;
+                        console.log("lista-productos",response.data.data);
                     })
                     .catch(error => {
                         console.error('Error al obtener los productos:', error);

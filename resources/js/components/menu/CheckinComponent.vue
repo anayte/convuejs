@@ -44,7 +44,7 @@
         },
         methods: {
             fetchProducts() {
-                axios.get('/inventario')
+                axios.get('/inventario2')
                     .then(response => {
                     this.products = response.data;
                     })
